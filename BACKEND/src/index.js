@@ -27,6 +27,8 @@ app.use(cors({
 }));
 
 // API Routes
+console.log("authRoutes:", authRoutes);
+console.log("messageRoutes:", messageRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
