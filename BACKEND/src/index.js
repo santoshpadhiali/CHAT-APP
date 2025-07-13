@@ -6,6 +6,8 @@ import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { app,server } from "./lib/socket.js";
+import path from "path";
+
 dotenv.config();
 
 
