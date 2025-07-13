@@ -11,7 +11,8 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 dotenv.config();
 
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const PORT = process.env.PORT;
 
 app.use(express.json({ limit: '50mb' }));
