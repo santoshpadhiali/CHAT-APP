@@ -38,6 +38,12 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend","vite-project", "dist", "index.html"));
   });
 }
+router.get("/:id", handler);        // ✅ valid
+router.get("/:username/profile");   // ✅ valid
+router.get("/:id", (req, res) => {
+  res.send(`User ID is ${req.params.id}`);
+});
+
 // ✅ Start server
 server.listen(PORT, () => {
   console.log("The app is running on the port: " + PORT);
