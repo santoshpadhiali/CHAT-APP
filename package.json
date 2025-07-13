@@ -1,0 +1,23 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+    "build": "npm install --prefix BACKEND && npm install --prefix FRONTANT/vite-project && npm run build --prefix FRONTANT/vite-project"
+,
+    "start": "npm run start --prefix BACKEND"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santoshpadhiali/chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/santoshpadhiali/chat-app/issues"
+  },
+  "homepage": "https://github.com/santoshpadhiali/chat-app#readme"
+}

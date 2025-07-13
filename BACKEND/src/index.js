@@ -27,6 +27,13 @@ app.use(cors({
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../FRONTANT/vite-project/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend","vite-project", "dist", "index.html"));
+  });
+}
 // ✅ Start server
 server.listen(PORT, () => {
   console.log("The app is running on the port: " + PORT);
